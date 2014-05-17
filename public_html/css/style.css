@@ -1,0 +1,615 @@
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, img, span, div,
+table, tr, td,
+ul, ol, ul li, ol li,
+hr,
+form, textarea, button,
+header, article, nav, hgroup, mark, section, time, footer {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	outline: none;
+	font-weight: 400;
+	background: transparent;
+}
+
+
+header, article, nav, hgroup, section, time, footer {
+	display: block;
+}
+
+
+/* Основной стиль
+ */
+html, body {
+	min-width: 840px;
+	width: 100%;
+	min-height: 100%;
+}
+
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, serif;
+	color: #963;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {
+	border-color: #963;
+	color: #963;
+}
+
+h1 {
+	font-size: 30px;
+	color: #300;
+}
+
+h1 a {
+	border-color: #300;
+	color: #300;
+}
+
+h2 {
+	font-size: 21px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+
+hr {
+	margin: 10px 0;
+	width: 100%;
+	height: 1px;
+	background: #eee;
+}
+
+hr.clear {
+	margin: 10px 0;
+	background: transparent;
+}
+
+hr.clear2 {
+	margin: 20px 0;
+	background: transparent;
+}
+
+
+p {
+	margin: 0 0 2px 0;
+	text-align: justify;
+	
+}
+
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	margin: 0 0 5px 0;
+	padding: 0 0 0 22px;
+	background: url(/images/list-back.png) 10px 4px no-repeat;
+}
+
+ol {
+	padding: 0 0 0 30px;
+}
+
+ol li {
+	margin: 0 0 5px 0;
+}
+
+
+form h1 {
+	font-size: 20px;
+}
+
+form h2 {
+	font-size: 18px;
+}
+
+input, textarea, select, label {
+	outline: none;
+}
+
+input[type='radio'], label {
+	cursor: pointer;
+}
+
+input[type='text'], input[type='password'], textarea, select {
+	padding: 5px;
+	border: 1px solid #cfcfcf;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 17px;
+	color: #999;
+	box-shadow: inset 0 2px 0 #eee;
+	background: #fff;
+}
+
+input[type='text']: focus, input[type='password']: focus, textarea: focus, select: focus {
+	border: 1px solid #f90;
+	color: #333;
+	box-shadow: inset 0 2px 0 #ffdfdf, 0 0 5px #fc6;
+}
+
+
+button {
+	padding: 10px 35px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+	color: #fff;
+	text-shadow: 0 1px 0 #c60;
+	vertical-align: middle;
+	cursor: pointer;
+	box-shadow: inset 0 -1px 8px #ffc, 0 4px 0 #f90, 0 5px 2px #999;
+	-moz-box-shadow: inset 0 -1px 8px #ffc, 0 4px 0 #f90, 0 5px 2px #999;
+	-webkit-box-shadow: inset 0 -1px 8px #ffc, 0 4px 0 #f90, 0 5px 2px #999;
+	background: #f90;
+	background: -o-linear-gradient(top, #f90, #fc6);
+	background: -webkit-linear-gradient(top, #f90, #fc6);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f90), color-stop(100%,#fc6));
+	background: -moz-linear-gradient(top, #f90, #fc6);
+	background: -ms-linear-gradient(top, #f90, #fc6);
+	background: linear-gradient(top, #f90, #fc6);
+}
+
+button: active {
+	margin: 2px 0 -2px 0;
+	box-shadow: inset 0 -1px 8px #ffc, 0 2px 0 #f90, 0 4px 2px #999;
+	-moz-box-shadow: inset 0 -1px 8px #ffc, 0 2px 0 #f90, 0 4px 2px #999;
+	-webkit-box-shadow: inset 0 -1px 8px #ffc, 0 2px 0 #f90, 0 4px 2px #999;
+}
+
+button div.load {
+	width: 100%;
+	background: url(/images/load.gif) 50% 50% no-repeat;
+}
+
+
+a {
+	border-bottom: 1px solid #fc6;
+	color: #f90;
+	text-decoration: none;
+}
+
+a: active, a: focus {
+	border: 0 none;
+}
+
+a:hover {
+	border-color: #f66;
+	color: #f03;
+}
+
+a.pseudo {
+	border-bottom-style: dotted;
+}
+
+
+/* Спец-классы
+ */
+.wrap {
+	margin: auto;
+	width: 840px;
+}
+
+.over {
+	overflow: hidden;
+}
+
+.w100 {
+	width: 99%;
+}
+
+.w75 {
+	width: 75%;
+}
+
+.w50 {
+	width: 50%;
+}
+
+img.secure{
+	margin: 0 0 0 25px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input.secure{
+	width: 160px;
+	vertical-align: middle;
+}
+
+div.help{
+	padding: 0 0 0 2px;
+	color: #999;
+	font-size: 10px;
+}
+
+.float-right {
+	float: right;
+}
+
+
+/* Модальное окно
+ */
+.box-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	background: #000;
+}
+
+.box-fon {
+	padding: 15px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	box-shadow: 0 0 15px #000;
+	-moz-box-shadow: 0 0 15px #000;
+	-webkit-box-shadow: 0 0 15px #000;
+	background: #000;
+}
+
+.box-message {
+	padding: 15px;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	color: #fff;
+}
+
+.box-message div.close {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+	background: url(/images/close.png);
+}
+
+.box-message hr {
+	margin: 4px 0;
+	border-top: 1px solid #666;
+	width: 100%;
+}
+
+.box-message h1 {
+	color: #fff;
+	font-size: 20px;
+}
+
+.box-message a {
+	color: #369!important;
+	text-decoration: underline!important;
+}
+
+.box-message a:hover {
+	color: #69c!important;
+	text-decoration: none!important;
+}
+
+
+/* Шапка
+ */
+header {
+	overflow: hidden;
+}
+
+header section.top {
+	border-bottom: 1px solid #c60;
+	height: 100px;
+	background: #f90;
+}
+
+header section.top h1 {
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 80px;
+	font-size: 60px;
+}
+
+header section.top h1 a {
+	padding: 0 0 0 60px;
+	border: 0 none;
+	position: relative;
+	top: 10px;
+	color: #fff;
+	text-shadow: 0 1px 0 #960;
+	background: url(/images/c.png) 0 10px no-repeat;
+}
+
+header section.top h1 a span {
+	margin: 12px 0 0 0;
+	position: absolute;
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 10px;
+	text-shadow: none;
+}
+
+
+/* Навигация
+ */
+header section.top nav {
+	position: relative;
+	top: 40px;
+	float: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 0 1px 0 #960;
+}
+
+header section.top nav ul li {
+	margin: 0 1px;
+	padding: 0;
+	float: left;
+	background: transparent;
+}
+
+header section.top nav ul li a {
+	padding: 8px 15px;
+	border: 0 none;
+	color: #fff;
+}
+
+header section.top nav ul li a:hover, header section.top nav ul li.selected a {
+	color: #f90;
+	background: #fff;
+}
+
+
+/* Боковая панель
+ */
+aside {
+	margin: 10px 0;
+	float: right;
+	width: 300px;
+}
+
+aside h1 {
+	font-size: 20px;
+}
+
+aside section {
+	margin: 5px auto 20px auto;
+	width: 245px;
+}
+
+aside section ul.category {
+;
+}
+
+aside section ul.category li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #eee;
+	background-position: 8px -26px;
+}
+
+aside section ul.category li a {
+	padding: 5px 0;
+	border: 0 none;
+	display: block;
+}
+
+aside section ul.category li a b {
+	float: right;
+	color: #999;
+}
+
+aside section ul.category li a:hover b {
+	color: #666;
+}
+
+
+/* Контент
+ */
+section.content {
+	width: 500px;
+}
+
+section.page {
+	width: 100%;
+}
+
+
+/* Цитата
+ */
+section.content div.quote {
+	padding: 15px 5px;
+	border-bottom: 1px solid #eee;
+}
+
+section.content div.quote div.text {
+	margin: 0 0 5px 0;
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 15px;
+}
+
+section.content div.quote div.text p {
+	padding: 0;
+	text-align: left;
+	text-indent: 0;
+}
+
+section.content div.quote div.text p a {
+	border: 0 none;
+	display: block;
+	color: #000!important;
+}
+
+section.content div.quote div.text p i {
+	padding: 0 1px;
+	font-size: 17px;
+}
+
+section.content div.quote div.info {
+	color: #666;
+}
+
+section.content div.quote div.info span.like-block {
+	float: right;
+}
+
+section.content div.quote div.info span.like, section.content div.quote div.info span.liked {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: 0 none;
+	padding: 3px 4px 1px 22px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #999;
+	cursor: pointer;
+	background: url(/images/like.png) 4px 4px no-repeat;
+}
+
+section.content div.quote div.info span.liked {
+	color: #f90;
+	background-position: 4px -14px;
+}
+
+section.content div.quote div.info span.author a {
+	border-color: #999;
+	font-size: 13px;
+	color: #666;
+}
+
+section.content div.quote div.info span.author a:hover {
+	border-color: #666;
+	color: #333;
+}
+
+
+/* Большая цитата
+*/
+section.content div.big {
+	padding-top: 25px;
+	padding-bottom: 30px;
+}
+
+section.content div.big div.text {
+	margin-bottom: 10px;
+	color: #000;
+}
+
+section.content div.big div.info span.author, section.content div.big div.info span.author a {
+	font-size: 15px;
+}
+
+
+/* Авторы цитат
+ */
+.authors h1 {
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+}
+
+.authors h1 a {
+	border-color: #666;
+	color: #333;
+}
+
+.authors h1 b {
+	float: right;
+	color: #999;
+}
+
+
+/* Переключатель страниц
+ */
+.switch-pages {
+	margin: 10px 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+
+.switch-pages a, .switch-pages span {
+	margin: 0 3px;
+	padding: 6px 11px;
+	border: 0 none;
+	text-decoration: none;
+}
+
+.switch-pages span {
+	border-bottom: 1px solid #c60;
+	color: #fff;
+	font-weight: 700;
+	background: #f90;
+}
+
+.switch-pages a:hover {
+	border-bottom: 1px solid #666;
+	color: #fff;
+	background: #999;
+}
+
+
+.switch-pages a.back span, .switch-pages a.next span {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	width: 8px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(/images/switch.png) 0 0 no-repeat;
+}
+
+
+.switch-pages a.back span {
+	background-position: 0 0px;
+}
+
+.switch-pages a.back:hover span {
+	background-position: 0 -26px;
+}
+
+
+.switch-pages a.next span {
+	background-position: 0 -52px;
+}
+
+.switch-pages a.next:hover span {
+	background-position: 0 -78px;
+}
+
+
+/* Подвал
+ */
+footer {
+	margin: 20px 0 0 0;
+	padding: 10px;
+	border-top: 2px solid #f60;
+	color: #f60;
+}
+
+footer a {
+	border-color: #f60;
+	color: #f60;
+}
+
+footer section.right {
+	float: right;
+}
+
