@@ -54,7 +54,7 @@ error_reporting(E_ALL);
  */
 
 // Set the full path to the docroot
-define('DOCROOT', 'C:'.DIRECTORY_SEPARATOR.'Winginx'.DIRECTORY_SEPARATOR.'home'.DIRECTORY_SEPARATOR.'ylianov.ru'.DIRECTORY_SEPARATOR.'kohana'.DIRECTORY_SEPARATOR);
+define('DOCROOT', 'set full path to kohana dir');
 
 // Make the application relative to the docroot, for symlink'd index.php
 if ( ! is_dir($application) AND is_dir(DOCROOT.$application))
