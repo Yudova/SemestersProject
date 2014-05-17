@@ -8,7 +8,7 @@ echo View::factory('Header', array(
 
 $content  = "<h1>" . $h1 . "</h1>";
 $content .= "<hr style='margin-bottom:0' />";
-$content .= View::factory('quote/quotes', array('quotes' => $quotes));
+$content .= View::factory('Quote/Quotes', array('quotes' => $quotes));
 $content .= "<hr class='clear' />";
 $content .= $page;
 

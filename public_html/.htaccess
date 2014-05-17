@@ -1,0 +1,8 @@
+AddDefaultCharset utf-8
+Action php5.3-script  /cgi-bin/php5.3.cgi
+AddType php5.3-script .php
+
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php/$0 [PT]

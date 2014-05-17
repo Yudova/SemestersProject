@@ -5,7 +5,7 @@ class Controller_Index extends Controller_Application {
 	public function action_index()
 	{
 		// Модель цитат
-		$quotes = ORM::factory('quote');
+		$quotes = ORM::factory('Quote');
 
 		// Сортировка
 		$sort_best = ($this->request->param('sort', NULL) === 'best');
@@ -41,7 +41,7 @@ class Controller_Index extends Controller_Application {
 			}
 			
 			// Загруажем представление
-			$this->response->body(View::factory('index', array(
+			$this->response->body(View::factory('Index', array(
 				'title' 		=> $title,
 				'description' 	=> $description,
 				'keywords' 		=> $keywords . " страница " . $pagination->current_page,

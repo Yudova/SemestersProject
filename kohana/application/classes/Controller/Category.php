@@ -4,13 +4,13 @@ class Controller_Category extends Controller_Application {
 
 	public function action_index ()
 	{
-		$categories = ORM::factory('category');
+		$categories = ORM::factory('Category');
 	
 		$uri = $this->request->param('uri', NULL);
 
 		if ($uri === NULL)
 		{
-			$this->request->redirect('/');
+			$this->redirect('/');
 		}
 		else
 		{
@@ -55,7 +55,7 @@ class Controller_Category extends Controller_Application {
 					$quotes_data = $category->quote->order_by('id', 'DESC')->limit($items_per_page)->offset($pagination->offset)->find_all()->as_array();
 				}
 
-				$this->response->body(View::factory('all', array(
+				$this->response->body(View::factory('All', array(
 					'title' 		=> $title,
 					'description' 	=> $category->description,
 					'keywords' 		=> UTF8::strtolower($title) . " " . UTF8::strtolower($category->title) . " афоризмы фразы статусы страница " . $pagination->current_page,

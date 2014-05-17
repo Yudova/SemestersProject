@@ -6,7 +6,7 @@ return array(
 		'current_page'   => array('query_string' => 'page'),
 		'total_items'    => 0,
 		'items_per_page' => 10,
-		'view'           => 'pagination/basic',
+		'view'           => 'Pagination/Basic',
 		'auto_hide'      => TRUE,
 	),
 	'quotes' => array(
@@ -14,7 +14,7 @@ return array(
 		'current_page'   => array('router' => 'page'),
 		'total_items'    => 0,
 		'items_per_page' => 15,
-		'view'           => 'pagination/basic',
+		'view'           => 'Pagination/Basic',
 		'auto_hide'      => TRUE,
 	),
 );

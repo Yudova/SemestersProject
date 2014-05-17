@@ -7,7 +7,7 @@ class Model_Author extends ORM {
 	 */
 	protected $_has_many = array(
 		'quote' => array(
-			'model' => 'quote',
+			'model' => 'Quote',
 			'foreign_key' => 'author_id',
 		),
 	);

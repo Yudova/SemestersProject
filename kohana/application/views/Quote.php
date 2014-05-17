@@ -13,7 +13,7 @@ $content .= "<div style='font-size:25px' class='text'><p>«" . $quote->quote . "
 $content .= "<div class='info'><span id='" . $quote->id . "' class='like-block'><span class='like'>" . $quote->rating . "</span></span></span><span class='author'>© <a href='/author/" . $quote->author->uri . "' title='" . $quote->author->description . "'>" . ($quote->author->full_name ? $quote->author->full_name : $quote->author->first_name) . "</a></span></div>";
 $content .= "</div><!--.quote-" . $quote->id . "-->";
 
-echo View::factory('page/dynamic', array(
+echo View::factory('Page/Dynamic', array(
 	'categories' => $categories, 
 	'content' 	 => $content
 ));

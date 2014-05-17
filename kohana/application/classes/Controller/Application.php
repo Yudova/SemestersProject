@@ -10,7 +10,7 @@ class Controller_Application extends Controller {
 
 	public function before()
 	{
-		$this->categories = ORM::factory('category')->order_by('title')->find_all()->as_array();
+		$this->categories = ORM::factory('Category')->order_by('title')->find_all()->as_array();
 	}
 
 } // End Controller_Application

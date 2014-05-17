@@ -7,7 +7,7 @@ class Model_Quote extends ORM {
 	 */
 	protected $_has_many = array(
 		'ip' => array(
-			'model' => 'rating',
+			'model' => 'Rating',
 			'foreign_key' => 'quote_id',
 		),
 	);
@@ -17,11 +17,11 @@ class Model_Quote extends ORM {
 	 */
 	protected $_belongs_to = array(
 		'author' => array(
-			'model' => 'author',
+			'model' => 'Author',
 			'foreign_key' => 'author_id',
 		),
 		'category' => array(
-			'model' => 'category',
+			'model' => 'Category',
 			'foreign_key' => 'category_id',
 		),
 	);

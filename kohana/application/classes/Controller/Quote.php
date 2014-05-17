@@ -5,7 +5,7 @@ class Controller_Quote extends Controller_Application {
 	public function action_index()
 	{
 		// Модель цитат
-		$quote = ORM::factory('quote', $this->request->param('id'));
+		$quote = ORM::factory('Quote', $this->request->param('id'));
 
 		if ($quote->loaded())
 		{
@@ -15,7 +15,7 @@ class Controller_Quote extends Controller_Application {
 
 			$title = "Цитата №" . $quote->id . " " . $quote->category->plural;
 
-			$this->response->body(View::factory('quote', array(
+			$this->response->body(View::factory('Quote', array(
 				'title' 		=> $title . ", " . UTF8::strtolower($quote->category->title) . " " . ($quote->author->full_name ? UTF8::strtolower($quote->author->full_name) : UTF8::strtolower($quote->author->first_name)) . " " . $quote->category->keywords,
 				'description' 	=> $quote->category->title . ". Цитаты и афоризмы " . $quote->category->plural,
 				'keywords' 		=> UTF8::strtolower($quote->category->title) . " цитата номер " . $quote->id . " цитаты и афоризмы " . $quote->category->plural . " " . $quote->category->keywords,
@@ -33,7 +33,7 @@ class Controller_Quote extends Controller_Application {
 
 	public function action_rating()
 	{
-		$quote = ORM::factory('quote', $this->request->param('id'));
+		$quote = ORM::factory('Quote', $this->request->param('id'));
 		
 		if ($quote->loaded())
 		{
@@ -43,7 +43,7 @@ class Controller_Quote extends Controller_Application {
 
 			if ( ! $voted)
 			{
-				ORM::factory('rating')->set('quote_id', $quote->id)->set('user_ip', Request::$client_ip)->save();
+				ORM::factory('Rating')->set('quote_id', $quote->id)->set('user_ip', Request::$client_ip)->save();
 				$quote->set('rating', $quote->rating + 1);
 				$quote->save();
 			}

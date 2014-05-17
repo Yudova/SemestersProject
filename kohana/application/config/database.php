@@ -19,9 +19,9 @@ return array
 			 * Ports and sockets may be appended to the hostname.
 			 */
 			'hostname'   => 'localhost',
-			'database'   => 'quotes',
-			'username'   => 'root',
-			'password'   => FALSE,
+			'database'   => 'slimmi_cttzone',
+			'username'   => 'slimmi_cttzone',
+			'password'   => 'iGHTHLAqxbqRPAh4',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => 'cz_',

@@ -7,7 +7,7 @@ class Model_Category extends ORM {
 	 */
 	protected $_has_many = array(
 		'quote' => array(
-			'model' => 'quote',
+			'model' => 'Quote',
 			'foreign_key' => 'category_id',
 		),
 	);
