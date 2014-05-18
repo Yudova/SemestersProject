@@ -11,6 +11,6 @@ There are only application files and files of pagination module in this reposito
 Application files contain:
  * bootstrap;
  * routes;
- * controller's files;
- * model's files;
- * view's files;
+ * controller files;
+ * model files;
+ * view files.
